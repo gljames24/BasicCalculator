@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/darkGrey"
+    tools:ignore="HardcodedText"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/resultsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/blue"
+            android:textAlignment="textEnd"
+            android:textSize="35sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/equationTextView"
+            />
+
+        <TextView
+            android:id="@+id/equationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="4"
+            android:text="_"
+            android:textAlignment="textEnd"
+            android:textColor="@color/azure"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultsTextView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button
+            style="@style/calculatorButton"
+            android:text="±"/>
+        <Button
+            style="@style/calculatorButton"
+            android:onClick="backspaceAction"
+            android:text="⌫"/>
+        <Button
+            style="@style/calculatorButton"
+            android:onClick="clearAction"
+            android:text="AC"/>
+        <Button
+            style="@style/calculatorButton"
+            android:background="@color/azure"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:onClick="returnAction"
+            android:text="⏎"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/calculatorButton"
+            android:text="7"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="8"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="9"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="×"/>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/calculatorButton"
+            android:text="4"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="5"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="6"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="÷"/>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/calculatorButton"
+            android:text="1"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="2"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="3"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="+"/>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/calculatorButton"
+            android:text="."/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="0"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="☐^◻"/>
+        <Button
+            style="@style/calculatorButton"
+            android:text="–"/>
+
+    </LinearLayout>
+
+</LinearLayout>
