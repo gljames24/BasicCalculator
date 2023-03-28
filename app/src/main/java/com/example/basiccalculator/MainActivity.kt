@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 SymbolType.EXPONENT -> {
-                    if(!hasOperator && !hasExponent){
+                    if(!hasOperator && !hasExponent && !binding.equationTextView.text.equals("") && !binding.equationTextView.text.contains("_")){
                         hasExponent = true
                     }
                 }
@@ -184,6 +184,8 @@ class MainActivity : AppCompatActivity() {
         binding.resultsTextView.text = ""
         binding.resultsTextView.text = calculateResult()
         clearEquation(view)
+        binding.equationTextView.text = binding.resultsTextView.text
+        hasDecimal = true
     }
 
     private fun calculateResult(): String {
